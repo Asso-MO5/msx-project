@@ -7,7 +7,7 @@ Vous pouvez suivre l'avancé de ce projet sur la chaîne [Twitch](https://twtich
 - [Les outils](doc/tools.md)
 - [La palette de couleurs](doc/palette.md)
 - [Les sprites](doc/sprites.md) 
-
+- [Les ressources](doc/ressources.md) 
 ---
 Produit par 
 

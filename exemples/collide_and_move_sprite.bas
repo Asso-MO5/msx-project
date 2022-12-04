@@ -1,0 +1,36 @@
+5 ' CODE basé sur --> https://github.com/plattysoft/Modern-MSX-BASIC-Game-Dev/blob/main/examples/src/ddungeon.bas
+100 COLOR 15,1,1:SCREEN 2,0,0
+110 GOSUB 2000
+
+200 X=10: Y=10
+210 LINE (8,8)-(256-16, 192-16),15,B 'cadre
+220 LINE (8,32)-(200, 32+8),15,BF 'plateforme
+230 LINE -(200-8,64),15,BF 'mur
+240 LINE (128,80)-STEP(-40,8),15,BF 'plateforme 2
+250 LINE -STEP(8,-36),15,BF
+260 LINE (127,127)-(120,120),5,BF
+270 LINE (24,87)-(47,111),8,BF
+
+290 'TODO fix collide bug
+300 A=X : B=Y :C=STICK(0): P=(POINT (X,Y))+(POINT(X+8,Y)) + ( POINT (X,Y+8)) + (POINT (X+8,Y+8))
+310 X=X+ (C>5 AND C<9) - (C>1 AND C<5): Y=Y+ (C=8 OR C=1 OR C=2) - (C>4 AND C<7)
+320 IF P>4 THEN X=A: Y=B
+
+400 IF P1=8 OR P2=8 THEN GOSUB 900
+410 IF P1=5 OR P2=5 THEN GOSUB 950
+
+700 PUT SPRITE 0,(X,Y-1),13,0
+
+800 GOTO 300
+
+900 END
+
+950 END
+
+1000 DATA 42,24,3C,5A,FF,FF,3C,C3
+1010 DATA *
+
+2000 S=BASE(9)
+2010 READ R$
+2020 IF R$="*" THEN RETURN ELSE VPOKE S,VAL("&H"+R$):S=S+1
+2030 GOTO 2010
