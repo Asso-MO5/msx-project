@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../doc/**/*.md')
+
+  return posts.map((post) => {
+    return {
+      params: { slug: post.frontmatter.slug },
+      props: { ...post },
+    }
+  })
+}
+
+const { Content, frontmatter } = Astro.props
+console.log(frontmatter)
+---
+
+<Layout
+  title={frontmatter.title + ' | Projet MSX'}
+  description={frontmatter?.description}
+>
+  <article>
+    <h1>{frontmatter.title}</h1>
+    <Content />
+    <!-- {astro.html} -->
+  </article>
+</Layout>
