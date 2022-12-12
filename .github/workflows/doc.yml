@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2          
       - name: Install, build, and upload your site output
         uses: withastro/action@v0
-        width: 
+        with: 
           path: ./../web
         # with:
             # path: . # The root location of your Astro project inside the repository. (optional)
