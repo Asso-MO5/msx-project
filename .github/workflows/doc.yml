@@ -54,7 +54,6 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          working-directory: ./web
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
@@ -63,7 +62,7 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        working-directory: ${{ env.BUILD_PATH }}
+        working-directory: ${{ env.BUILD_PATH }}/web
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
