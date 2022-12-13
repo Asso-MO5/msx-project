@@ -1,5 +1,9 @@
+<script>
+  import { BASE_PATH } from '../utils/constant'
+</script>
+
 <a href="/msx-project/">
-  <img src="/msx-logo.svg" alt="logo" />
+  <img src={BASE_PATH + 'msx-logo.svg'} alt="logo" />
 </a>
 
 <style>

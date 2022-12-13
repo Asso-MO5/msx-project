@@ -6,7 +6,7 @@ description: "Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est
 
 <center>
 
-![sprite limitation](assets/limitation_sprite.gif)
+![sprite limitation](/msx-project/assets/limitation_sprite.gif)
 
 </center>
 

@@ -6,7 +6,7 @@ description: "La palette de couleur MSX"
 
 <center>
 
-![sprite limitation](assets/colors_msx.gif)
+![sprite limitation](/msx-project/assets/colors_msx.gif)
 
 </center>
 

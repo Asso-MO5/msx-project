@@ -1,12 +1,13 @@
 <script lang="ts">
   import type { MenuLink } from '../types/menu-links'
+  import { BASE_PATH } from '../utils/constant'
 
   export let menuLinks: MenuLink[]
 </script>
 
 <ul>
   {#each menuLinks as link}
-    <li><a href={link.slug}>{link.title}</a></li>
+    <li><a href={BASE_PATH + link.slug}>{link.title}</a></li>
   {/each}
 </ul>
 
