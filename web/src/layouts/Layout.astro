@@ -1,27 +1,41 @@
 ---
+import Menu from '../components/Menu.svelte'
+import type { MenuLink } from '../types/menu-links'
+
 export interface Props {
   title: string
   description?: string
 }
 
 const { title, description } = Astro.props
+
+const mds = await Astro.glob<MenuLink>('../doc/**/*.md')
+const menuLinks = mds
+  .map((md) => md.frontmatter)
+  .sort((a, b) => a.title.localeCompare(b.title))
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description || 'Projet MSX'} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Menu client:idle menuLinks={menuLinks} />
+    <main class="main">
+      <div class="slot">
+        <slot />
+      </div>
+    </main>
   </body>
 </html>
 <style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Russo+One&display=swap');
   :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(
@@ -31,12 +45,58 @@ const { title, description } = Astro.props
       white 60%
     );
   }
+
+  body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    height: 100vh;
+  }
+
+  .main {
+    position: relative;
+  }
+
+  .slot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
   html {
-    font-family: system-ui, sans-serif;
+    font-family: 'Poppins', sans-serif;
+
     background-color: #f6f6f6;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Russo One', sans-serif;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
   }
 </style>

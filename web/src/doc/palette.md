@@ -1,12 +1,9 @@
 ---
 title: "Palette"
 slug: "palette"
-description: "Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut"
+description: "La palette de couleur MSX"
 ---
 
-[Acccueil](/)
-
-# La palette de couleurs
 <center>
 
 ![sprite limitation](assets/colors_msx.gif)
