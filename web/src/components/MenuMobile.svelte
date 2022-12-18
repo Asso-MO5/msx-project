@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { MenuLink } from '../types/menu-links'
+  import type { Link } from '../types/menu-links'
   import Hamburger from './Hamburger.svelte'
   import Logo from './Logo.svelte'
   import MenuLinks from './MenuLinks.svelte'
 
-  export let menuLinks: MenuLink[]
+  export let links: Link[]
   let isOpen = false
 
   const setIsOpen = () => (isOpen = !isOpen)
@@ -15,7 +15,7 @@
 <div class="menu" data-isopen={isOpen}>
   <Logo />
   <div class="links" on:click={() => (isOpen = false)} role="presentation">
-    <MenuLinks {menuLinks} />
+    <MenuLinks {links} />
   </div>
 </div>
 

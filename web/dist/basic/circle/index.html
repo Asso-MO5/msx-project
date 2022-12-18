@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Trace un cercle ou une ellipse.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles/prism.css">
+    <meta name="generator" content="Astro v1.6.14">
+    <title>CIRCLE | Projet MSX</title>
+  <link rel="stylesheet" href="/msx-project/assets/_slug_.e0d0c0a3.css" />
+<link rel="stylesheet" href="/msx-project/assets/_slug_.6bae43a4.css" /></head>
+  <body>
+    <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=t=>{const e=async()=>{await(await t())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)},window.dispatchEvent(new Event("astro:idle"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><astro-island uid="1TuM5m" component-url="/msx-project/Menu.f75b4be2.js" component-export="default" renderer-url="/msx-project/client.788af3ea.js" props="{&quot;links&quot;:[1,&quot;[[0,{\&quot;title\&quot;:[0,\&quot;basic\&quot;],\&quot;posts\&quot;:[1,\&quot;[[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;CIRCLE\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;circle\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Trace un cercle ou une ellipse.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;COLOR\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;color\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Défini les couleurs utilisées à partir de maintenant.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;LINE\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;line\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Trace une ligne ou un rectangle entre deux points.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;PEEK\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;peek\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;PEEK à cette adresse particulière renvoie l&#39;état de certaines touches.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;PSET/PRESET\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;pset-preset\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Affiche ou enlève un point aux coordonnées spécifiées dans la couleur spécifiée.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;PUTSPRITE\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;putsprite\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Affiche le sprite spécifié.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;SCREEN\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;screen\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Ici, la commande est utilisée simplement pour passer dans le mode d&#39;affichage numéro 2, qui est pratique pour manipuler des pixels unitairement.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;SPRITE$(n)\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;sprites-n\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Défini ou récupère le motif du sprite en paramètre.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;STEP(x,y)\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;step-x-y\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Une coordonnée peut-être décorée par `STEP` pour spécifier une coordonnée relative au dernier point tracé par une commande graphique.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;STRIG(n)\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;strig-n\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Renvoie la valeur de la barre espace ou d&#39;un bouton de périphériques d&#39;entrée de type joystick, souris,...\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;VDP(1)\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;vdp\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Renvoie ou accède au registre 1 du VDP.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;basic\\\&quot;]}]]\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;blog\&quot;],\&quot;posts\&quot;:[1,\&quot;[[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Session #1\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;session-1\\\&quot;],\\\&quot;number\\\&quot;:[0,1],\\\&quot;description\\\&quot;:[0,\\\&quot;Lancement du projet !\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;blog\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Session #2\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;session-2\\\&quot;],\\\&quot;number\\\&quot;:[0,2],\\\&quot;description\\\&quot;:[0,\\\&quot;Lancement du projet !\\\&quot;],\\\&quot;code\\\&quot;:[0,\\\&quot;/exemples/collide_and_move_sprite.bas\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;blog\\\&quot;]}]]\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;exemples\&quot;],\&quot;posts\&quot;:[1,\&quot;[[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Affichage et dessin\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;space\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Affichage et dessin au curseur\\\&quot;],\\\&quot;code\\\&quot;:[0,\\\&quot;/exemples/prez_space.bas\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;exemples\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Déplacements et collisions\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;move\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Exemple de déplacements et collisions\\\&quot;],\\\&quot;code\\\&quot;:[0,\\\&quot;/exemples/collide_and_move_sprite.bas\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;exemples\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Ressources externes\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;externe\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Retrouvez des exemples ne faisant pas partie du projet.\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;exemples\\\&quot;]}]]\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;graphisme\&quot;],\&quot;posts\&quot;:[1,\&quot;[[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Les sprites\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;sprites\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;graphisme\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Palette\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;palette\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;La palette de couleur MSX\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;graphisme\\\&quot;]}]]\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;outils\&quot;],\&quot;posts\&quot;:[1,\&quot;[[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;MSX Pen\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;msxpen\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Emulateur pour MSX\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;outils\\\&quot;]}],[0,{\\\&quot;title\\\&quot;:[0,\\\&quot;Tinysprite\\\&quot;],\\\&quot;slug\\\&quot;:[0,\\\&quot;tinysprite\\\&quot;],\\\&quot;description\\\&quot;:[0,\\\&quot;Editeur de Sprite pour MSX\\\&quot;],\\\&quot;category\\\&quot;:[0,\\\&quot;outils\\\&quot;]}]]\&quot;]}]]&quot;]}" ssr="" client="idle" opts="{&quot;name&quot;:&quot;Menu&quot;,&quot;value&quot;:true}" await-children=""><div class="container svelte-1xn4mm"><a href="/msx-project/"><img src="/msx-project/msx-logo.svg" alt="logo" class="svelte-y1u7hm">
+</a>
+  <div class="box svelte-1xn4mm"><div class="content svelte-1xn4mm"><ul class="svelte-i4zgp6"><li class="title svelte-i4zgp6"><a href="/msx-project/basic" class="svelte-i4zgp6">basic</a></li>
+    <ul class="links svelte-i4zgp6"><li><a href="/msx-project/basic/circle" class="svelte-i4zgp6">CIRCLE</a>
+        </li><li><a href="/msx-project/basic/color" class="svelte-i4zgp6">COLOR</a>
+        </li><li><a href="/msx-project/basic/line" class="svelte-i4zgp6">LINE</a>
+        </li><li><a href="/msx-project/basic/peek" class="svelte-i4zgp6">PEEK</a>
+        </li><li><a href="/msx-project/basic/pset-preset" class="svelte-i4zgp6">PSET/PRESET</a>
+        </li><li><a href="/msx-project/basic/putsprite" class="svelte-i4zgp6">PUTSPRITE</a>
+        </li><li><a href="/msx-project/basic/screen" class="svelte-i4zgp6">SCREEN</a>
+        </li><li><a href="/msx-project/basic/sprites-n" class="svelte-i4zgp6">SPRITE$(n)</a>
+        </li><li><a href="/msx-project/basic/step-x-y" class="svelte-i4zgp6">STEP(x,y)</a>
+        </li><li><a href="/msx-project/basic/strig-n" class="svelte-i4zgp6">STRIG(n)</a>
+        </li><li><a href="/msx-project/basic/vdp" class="svelte-i4zgp6">VDP(1)</a>
+        </li>
+    </ul><li class="title svelte-i4zgp6"><a href="/msx-project/blog" class="svelte-i4zgp6">blog</a></li>
+    <ul class="links svelte-i4zgp6"><li><a href="/msx-project/blog/session-1" class="svelte-i4zgp6">Session #1</a>
+        </li><li><a href="/msx-project/blog/session-2" class="svelte-i4zgp6">Session #2</a>
+        </li>
+    </ul><li class="title svelte-i4zgp6"><a href="/msx-project/exemples" class="svelte-i4zgp6">exemples</a></li>
+    <ul class="links svelte-i4zgp6"><li><a href="/msx-project/exemples/space" class="svelte-i4zgp6">Affichage et dessin</a>
+        </li><li><a href="/msx-project/exemples/move" class="svelte-i4zgp6">Déplacements et collisions</a>
+        </li><li><a href="/msx-project/exemples/externe" class="svelte-i4zgp6">Ressources externes</a>
+        </li>
+    </ul><li class="title svelte-i4zgp6"><a href="/msx-project/graphisme" class="svelte-i4zgp6">graphisme</a></li>
+    <ul class="links svelte-i4zgp6"><li><a href="/msx-project/graphisme/sprites" class="svelte-i4zgp6">Les sprites</a>
+        </li><li><a href="/msx-project/graphisme/palette" class="svelte-i4zgp6">Palette</a>
+        </li>
+    </ul><li class="title svelte-i4zgp6"><a href="/msx-project/outils" class="svelte-i4zgp6">outils</a></li>
+    <ul class="links svelte-i4zgp6"><li><a href="/msx-project/outils/msxpen" class="svelte-i4zgp6">MSX Pen</a>
+        </li><li><a href="/msx-project/outils/tinysprite" class="svelte-i4zgp6">Tinysprite</a>
+        </li>
+    </ul>
+</ul></div></div>
+</div></astro-island>
+    <main class="main">
+      <div class="slot">
+        <div class="breadcrumb astro-66Z357C3">
+  <a href="/msx-project/" class="astro-66Z357C3">accueil</a>
+  <span class="astro-66Z357C3"> / </span>
+  <a href="/msx-project/basic" class="astro-66Z357C3">basic</a>
+  <span class="astro-66Z357C3"> / </span>
+  <a href="/msx-project/basic/circle" class="astro-66Z357C3">circle</a>
+  
+</div>
+
+
+        <article>
+    <h1>CIRCLE</h1>
+    <h2 id="circle-xyrayoncouleurdébutfinaspect"><code>CIRCLE (x,y),Rayon,Couleur,Début,Fin,Aspect</code></h2>
+<p>Trace un cercle ou une ellipse.</p>
+<ul>
+<li><em>Coordonnées</em> : les coordonnées du centre de la forme.</li>
+<li><em>Rayon</em> : la longueur du plus grand rayon de la forme.</li>
+<li><em>Début</em> : angle en radian du début du tracé du cercle.</li>
+<li><em>Fin</em> : angle en radian de la fin du tracé du cercle.</li>
+<li><em>Aspect</em> : aspect entre la rayon horizontal et vertical. Si l’aspect est 1, alors c’est un cercle.</li>
+</ul>
+    
+    <!-- {astro.html} -->
+  </article>
+      </div>
+    </main>
+  
+</body></html>
