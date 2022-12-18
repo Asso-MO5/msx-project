@@ -1,0 +1,31 @@
+---
+import { BASE_PATH } from '../utils/constant'
+
+export interface Props {
+  category: string
+  slug: string
+}
+
+const { category, slug } = Astro.props as Props
+---
+
+<div class="breadcrumb">
+  <a href={`${BASE_PATH}`}>accueil</a>
+  <span>{' / '}</span>
+  <a href={`${BASE_PATH}${category}`}>{category}</a>
+  <span>{' / '}</span>
+  <a href={`${BASE_PATH}${category}/${slug}`}>{slug}</a>
+  <slot />
+</div>
+
+<style>
+  .breadcrumb {
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+  }
+</style>

@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import type { MenuLink } from '../../types/menu-links'
+import { BASE_PATH } from '../../utils/constant'
+
+interface Props {
+  category: string
+  posts: MenuLink[]
+}
+
+export async function getStaticPaths() {
+  const mds = await Astro.glob<MenuLink>('../../**/*.md')
+  const menuLinks = mds
+    .map((md) => ({
+      ...md.frontmatter,
+      category: md.file.split('/').at(-2) ?? '',
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title))
+
+  const categories = menuLinks.reduce((acc: string[], currentValue) => {
+    const isExist = acc.find((link) => link === currentValue?.category)
+
+    if (!isExist && currentValue?.category) acc.push(currentValue.category)
+
+    return acc
+  }, [])
+
+  return categories.map((category) => {
+    return {
+      params: {
+        category: category,
+      },
+
+      props: {
+        category: category,
+        posts: menuLinks.filter((link) => link.category === category),
+      },
+    }
+  })
+}
+
+const { category, posts } = Astro.props as Props
+---
+
+<Layout title={category + ' | Projet MSX'} description={category}>
+  <main>
+    <h1>{category}</h1>
+
+    <section>
+      {
+        posts.map((post) => (
+          <a href={`${BASE_PATH}${category}/${post.slug}`} class="article">
+            {' '}
+            <article>
+              <div class="title">{post.title}</div>
+              <div class="description">{post.description}</div>
+            </article>
+          </a>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 3em;
+  }
+
+  section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .article {
+    border: 1px solid black;
+    flex-basis: 20vw;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+
+  .title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .description {
+    font-size: 0.8em;
+  }
+</style>

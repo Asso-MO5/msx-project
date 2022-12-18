@@ -1,0 +1,48 @@
+---
+import fs from 'fs'
+import { Prism } from '@astrojs/prism'
+
+export interface Props {
+  url: string
+  lang: string
+}
+const { url, lang = 'basic' } = Astro.props as Props
+
+const txt = fs.readFileSync(`${process.cwd()}/../${url}`, 'utf8')
+---
+
+<div class="code">
+  <Prism lang={lang} code={txt} />
+  <div class="link">
+    <a
+      href={`https://github.com/Asso-MO5/msx-project/tree/master/${url}`}
+      target="_blank">Lien vers le fichier</a
+    >
+  </div>
+</div>
+
+<style>
+  .code {
+    position: relative;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    padding: 15px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+  }
+
+  .link {
+    position: absolute;
+    background: black;
+    bottom: 25px;
+    right: 15px;
+    padding: 5px;
+  }
+  .link a {
+    text-decoration: none;
+    color: white;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import Breadcrumb from '../components/Breadcrumb.astro'
 import Menu from '../components/Menu.svelte'
 import type { MenuLink } from '../types/menu-links'
 
@@ -7,12 +8,29 @@ export interface Props {
   description?: string
 }
 
-const { title, description } = Astro.props
+const { title, description } = Astro.props,
+  { category, slug } = Astro.params
 
-const mds = await Astro.glob<MenuLink>('../doc/**/*.md')
+const mds = await Astro.glob<MenuLink>('../**/*.md')
 const menuLinks = mds
-  .map((md) => md.frontmatter)
+  .map((md) => ({
+    ...md.frontmatter,
+    category: md.file.split('/').at(-2) ?? '',
+  }))
   .sort((a, b) => a.title.localeCompare(b.title))
+
+const categories = menuLinks.reduce((acc: string[], currentValue) => {
+  const isExist = acc.find((link) => link === currentValue?.category)
+
+  if (!isExist && currentValue?.category) acc.push(currentValue.category)
+
+  return acc
+}, [])
+
+const links = categories.map((category) => ({
+  title: category,
+  posts: menuLinks.filter((link) => link.category === category),
+}))
 ---
 
 <!DOCTYPE html>
@@ -22,13 +40,15 @@ const menuLinks = mds
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description || 'Projet MSX'} />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles/prism.css" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <Menu client:idle menuLinks={menuLinks} />
+    <Menu client:idle links={links} />
     <main class="main">
       <div class="slot">
+        {category && slug && <Breadcrumb category={category} slug={slug} />}
         <slot />
       </div>
     </main>
@@ -74,6 +94,11 @@ const menuLinks = mds
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .astro-code {
+    padding: 15px;
+    border-radius: 3px;
   }
 
   h1,

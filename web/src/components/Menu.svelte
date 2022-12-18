@@ -2,9 +2,9 @@
   import MenuMobile from './MenuMobile.svelte'
   import MenuDesktop from './MenuDesktop.svelte'
   import { onMount } from 'svelte'
-  import type { MenuLink } from '../types/menu-links'
+  import type { Link } from '../types/menu-links'
 
-  export let menuLinks: MenuLink[] = []
+  export let links: Link[] = []
 
   let isMobile: boolean
 
@@ -19,7 +19,7 @@
 </script>
 
 {#if isMobile}
-  <MenuMobile {menuLinks} />
+  <MenuMobile {links} />
 {:else}
-  <MenuDesktop {menuLinks} />
+  <MenuDesktop {links} />
 {/if}
