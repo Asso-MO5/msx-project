@@ -5,7 +5,116 @@ import Layout from '../layouts/Layout.astro'
 <Layout title="PROJET MSX">
   <main>
     <h1>Bienvenue sur le <span class="text-gradient">Projet MSX</span></h1>
-    <p>Retrouvez ici toute la documentation sur la création du jeu.</p>
+    <p>
+      Retrouvez ici toute la documentation sur la création du jeu <b>ROOM n°5</b
+      >
+    </p>
+    <h2>L'histoire</h2>
+    <p>
+      Vous vous reveillez dans ce qui ressemble à une chambre d'hôtel. Le
+      téléphone sonne, une personne inconnue vous demande expressement de
+      rejoindre la chambre n°5.
+    </p>
+    <p>Vous tentez de sortir de la pièce mais la porte de s'ouvre pas.</p>
+    <p>
+      Vous ne savez pas qui vous êtes. Le personnage ne connait pas son propre
+      nom.
+    </p>
+    <h2>Mécaniques de jeu</h2>
+    Il s'agit d'un jeu de plateforme en vue de coté, sans scrolling.
+    <ul>
+      <li>
+        Aucune explication sur les contrôles ou les règles n'est donné au joueur
+        autre que l'indication de trouver la chambre n°5. L'intêret réside dans
+        l'apprentissage des mécaniques propres à chaque chambre pour en sortir
+      </li>
+      <li>
+        Chaque chambre est différente, les règles ayant cours à l'intérieur
+        ainsi que son agencement son aléatoires.
+      </li>
+      <li>
+        des symboles sont reliés à des mécaniques. Ils sont présent dans des
+        <b>tableaux</b> dans les chambres. Ils ne donne aucune indication sur leur
+        signification. C'est le joueur qui doit déduire à quel mécanique ce symbole
+        correspond pour l'aider dans sa progression
+      </li>
+      <li>Vous disposez de 3 points de vies.</li>
+    </ul>
+    <h3>Symboles et mécaniques</h3>
+    <ul>
+      <li>Un symbole est toujours relié à une mécanique.</li>
+      <li>
+        Une mécanique peut être une interaction avec un objet qui déclenche un
+        événement
+      </li>
+      <li>Un contrôle du joueur (l'assignation des touches...)</li>
+      <li>Une règle physique d'une pièce.</li>
+    </ul>
+    <h3>Le téléphone</h3>
+    <p>
+      Il n'y a aucune logique dans l'ordre d'apparition des chambres. Vous
+      pouvez passer de la chambre n°2 à la chambre n°234 par exemple.
+    </p>
+    <p>De fait, rejoindre la chambre n°5 est impossible.</p>
+    <p>Pour y parvenir, toutes les X chambres, un téléphone est présent.</p>
+    <p>
+      Le service de chambre vous appelera. Vous avez le choix de l'ignorer ou
+      répondre.
+    </p>
+    <p>
+      Chaque fois que vous répondez au téléphone et que votre réponse n'est pas
+      cohérente avec le chemin de l'histoire choisi à la première réponse, vous
+      perdez un point de vie.
+    </p>
+    <h4>Le dénouement de l'histoire</h4>
+    <p>les questions pourront s'orienter vers 3 fins possibles :</p>
+    <ul>
+      <li>
+        Vous êtes dans le coma, les appels sont des tentatives des médecins pour
+        vous reveiller.
+      </li>
+      <li>
+        Vous êtes le créateur des chambres, qui sont un passage
+        multidimensionnels. Vous êtes coincé et votre assistant tente de vous en
+        sortir.
+      </li>
+      <li>Vous êtes l'objet d'un test d'une intelligence supérieur.</li>
+    </ul>
+    <h2>Condition de victoire</h2>
+    <p>Vous devez atteindre la chambre n°5.</p>
+    <p>
+      Le seul moyen d'y parvenir est de répondre 5 fois consécutives à des
+      questions au téléphone allant sur le même dénouement. les questions
+      doivent être vague et mystérieuses pour brouiller les pistes.
+    </p>
+    <h2>Condition de défaite</h2>
+    <ul>
+      <li>Vous échouez à sortir d'une chambre</li>
+      <li>Vous n'avez plus de point de vie.</li>
+    </ul>
+    <h2>Direction artistique</h2>
+    <div class="flex">
+      <img src="/assets/maquette.png" alt="proposition de design" />
+    </div>
+    <p>Il doit régner un climat oppressant.</p>
+    <p>
+      Par conséquent, les chambres ne remplissent pas entierement l'écran. Cela
+      doit symboliser l'enfermement du personnage.
+    </p>
+    <p>
+      Tous les indicateurs doivent être intégrés à la scène, même la vie du
+      personnage.
+    </p>
+    <p>
+      il ne doit pas être possible de distinguer le genre du personnage, même
+      dans les dialogues.
+    </p>
+    <h2>Contraintes techniques</h2>
+    <p>
+      La création des chambres peut être soit défini à l'avance, soit créer de
+      manière procédurale en fonction des compétence pour réaliser cette partie.
+    </p>
+    <p>La présence d'ennemi doit être limités.</p>
   </main>
 </Layout>
 
@@ -27,5 +136,11 @@ import Layout from '../layouts/Layout.astro'
     background-size: 400%;
     background-position: 0%;
     white-space: nowrap;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
