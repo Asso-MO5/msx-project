@@ -16,10 +16,12 @@ bouts de dessin).
 
 ### Avantages
 - Prends très peu de place en **VRAM**.
+- Permet un scrolling de 6 pixel en pixel (contre 8 pour les autres modes).
 
 ### Inconvénients
-- Seulement** 2 couleurs pour tout l’écran**, de petits caractères (tuiles) de **6x8 pixels**.
--  Pas de possibilité d’utiliser les sprites.
+- Seulement **2 couleurs pour tout l’écran**.
+- Petits caractères (tuiles) de **6x8 pixels**.
+- Pas de possibilité d’utiliser les sprites.
 - Les 960 cases affichées à l’écran rendent le scrolling logiciel trop coûteux.
 
 ## Mode écran 1 (Graphic 1)
@@ -48,7 +50,7 @@ Le fait d’avoir 768 dessins de tuiles disponibles permet de mettre une tuile u
 chaque case de l’écran et c’est en ce sens qu’on peut le considérer comme un mode Bitmap.
 
 ### Avantages
-- Prends d’avoir des tuiles assez colorées.
+- Permet d’avoir des tuiles assez colorées.
 - Peut servir de mode Bitmap pour afficher une image plein écran.
 - Permet d’utiliser les sprites.
 - Les 768 cases affichées à l’écran rendent le scrolling logiciel raisonnablement coûteux.
