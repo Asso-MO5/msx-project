@@ -13,3 +13,5 @@ Trace un cercle ou une ellipse.
 - *Début* : angle en radian du début du tracé du cercle.
 - *Fin* : angle en radian de la fin du tracé du cercle.
 - *Aspect* : aspect entre la rayon horizontal et vertical. Si l'aspect est 1, alors c'est un cercle.
+
+> -- Mokona

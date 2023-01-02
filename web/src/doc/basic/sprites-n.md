@@ -14,3 +14,5 @@ Défini ou récupère le motif du sprite en paramètre.
 La chaîne de définition est d'une taille de 8 caractères ou 32 caractères, chacun d'entre eux représentant, sous sa représentation binaire, le motif d'une ligne ou demi-ligne de sprite (1 = pixel affiché, 0 = transparence).
 
 Un sprite 8x8 est composé de 8 caractères. Un sprite 16x16 est composé de 32 caractères.
+
+> -- Mokona

@@ -17,3 +17,5 @@ Le paramètre est le numéro de périphérique.
 - 4 : bouton 2 du port 2
 
 Il est aussi possible d'utiliser cette commande de manière évènementielle avec `ON STRIG GOSUB`.
+
+> -- Mokona

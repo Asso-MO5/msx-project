@@ -9,3 +9,5 @@ description: "Renvoie ou accède au registre 1 du VDP."
 Renvoie ou accède au registre 1 du VDP.
 
 - Bit 0 : si à 1, la taille d'affichage des sprites est doublée.
+
+> -- Mokona

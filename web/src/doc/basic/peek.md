@@ -13,3 +13,5 @@ PEEK à cette adresse particulière renvoie l'état de certaines touches.
 - Bit 5 : flèche BAS
 - Bit 6 : flèche HAUT
 - Bit 7 : flèche GAUCHE
+
+> -- Mokona

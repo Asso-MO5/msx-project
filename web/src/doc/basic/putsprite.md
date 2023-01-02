@@ -16,3 +16,5 @@ Affiche le sprite spécifié.
 En `SCREEN 2`
 - `X` est entre -32 et 255.
 - `Y` est entre -32 et 191. Y=208 désactive tous les sprites suivants. Y=209 désactive ce sprite en particulier.
+
+> -- Mokona

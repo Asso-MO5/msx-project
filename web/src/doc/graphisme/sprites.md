@@ -17,3 +17,5 @@ une fois la taille d'un sprite défini, tous les sprites doivent avoir la même 
 - 16 X 16 
 - 8 X 8
 
+> -- Kazerlelutin
+

@@ -13,3 +13,5 @@ Défini les couleurs utilisées à partir de maintenant.
 - *Bordure* : la couleur de la bordure de l'écran
 
 Il est possible de ne pas spécifier un des paramètres.
+
+> -- Mokona
