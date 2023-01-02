@@ -26,8 +26,25 @@ const { Content, frontmatter } = Astro.props
 >
   <article>
     <h1>{frontmatter.title}</h1>
-    <Content />
-    {frontmatter.code && <Code url={frontmatter.code} />}
+    <div class="content">
+      <Content />
+    </div>
+
+    {
+      frontmatter.code && (
+        <Code url={frontmatter.code} lang={frontmatter?.lang || 'basic'} />
+      )
+    }
     <!-- {astro.html} -->
   </article>
 </Layout>
+
+<style>
+  article {
+    padding: 0 20px;
+  }
+
+  .content {
+    max-width: 600px;
+  }
+</style>
