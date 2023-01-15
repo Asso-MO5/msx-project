@@ -1,0 +1,53 @@
+---
+import ScLayout from '../../components/sprite-creator/sc-layout.svelte'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="PROJET MSX">
+  <main>
+    <h1>Sprites <span class="text-gradient">Creator</span></h1>
+    <div class="grid">
+      <div class="box">
+        <ScLayout client:idle />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: calc(100vh - 10px);
+    padding-right: 10px;
+  }
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+    white-space: nowrap;
+  }
+
+  .grid {
+    height: 100%;
+    position: relative;
+  }
+
+  .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+</style>
