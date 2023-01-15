@@ -19,6 +19,13 @@ const menuLinks = mds
   }))
   .sort((a, b) => a.title.localeCompare(b.title))
 
+menuLinks.push({
+  title: 'Sprite Creator',
+  category: 'outils',
+  slug: 'sprite-creator',
+  description: 'Notre éditeur de sprites',
+  number: 0,
+})
 const categories = menuLinks.reduce((acc: string[], currentValue) => {
   const isExist = acc.find((link) => link === currentValue?.category)
 
