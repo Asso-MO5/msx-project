@@ -14,7 +14,7 @@ Vous avez le choix entre **15 couleurs** prédéfinies.
 
 1. black
 2. medium green
-3. light blue
+3. light green
 4. dark blue
 5. light blue
 6. dark red
