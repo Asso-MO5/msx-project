@@ -16,23 +16,22 @@
   let pixels = []
 
   const selectPixel = (e) => {
-    //TODO click seleuement dans le screen
-    // repérer la position même avec le zoom
-    //const ctx = canvas.getContext('2d')
-    const ctx = canvas.getContext('2d')
-    const ctxState = ctx.getTransform()
     const canvasPosition = canvas.getBoundingClientRect()
-    const x = e.clientX - canvasPosition.left / cameraZoom
-    const y = e.clientY - canvasPosition.top / cameraZoom
+    const ctx = canvas.getContext('2d')
+    const transform = ctx.getTransform()
+    //mouse position in canvas
+    const mouseX = e.clientX - canvasPosition.left
+    const mouseY = e.clientY - canvasPosition.top
+    const transformedX = mouseX - transform.e
+    const transformedY = mouseY - transform.f
+    //for target pixel under mouse
+    const x = Math.floor(transformedX / cameraZoom).toFixed(0)
+    const y = Math.floor(transformedY / cameraZoom).toFixed(0)
 
-    console.log('x', x, canvasWidth)
-    //tranx = origin O move to
-
-    //appliquer au point la position du curseur par rapport au move zoom et translate
-    // zooom c'est donc le canvas.width / cameraZoom Zoom de 2 = origin - canvas.width / 2
     pixels.push({
       x,
       y,
+      //color in store
       color: $currentColor,
     })
 
@@ -102,7 +101,6 @@
   onMount(() => {
     if (init) return
     setWindowWidth()
-    can
     init = true
   })
 </script>
@@ -116,13 +114,10 @@
 <style>
   .container {
     width: 100%;
-    height: 80%;
+    height: 85%;
   }
 
   canvas {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
     border: 1px solid black;
     background: #ccc;
   }
