@@ -7,17 +7,19 @@
 <main>
   <div class="menuLeft">
     <ScPalette />
+    <p>Tools</p>
   </div>
   <div class="editor"><ScFrame /></div>
   <div class="menuRight">
-    {$currentColor.name}
+    <p>Preview</p>
+    <p>code en live</p>
   </div>
 </main>
 
 <style scoped>
   main {
     display: grid;
-    grid-template-columns: auto 5fr 1fr;
+    grid-template-columns: auto 5fr 2fr;
     height: 100%;
     gap: 10px;
   }
