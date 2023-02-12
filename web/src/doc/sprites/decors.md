@@ -22,8 +22,8 @@ description: "Tuiles des décors"
 
 REM ____________________________________COMMODE_TEL.
 
-DATA 07,09,03,0F,00,FF,FF
-DATA E0,90,C0,E0,00,FF,FF
+DATA 07,09,03,0F,00,FF,FF,00
+DATA E0,90,C0,E0,00,FF,FF,00
 DATA 7F,40,5F,5F,5D,5F,5F,5F
 DATA FE,02,FA,FA,BA,FA,FA,FA
 
@@ -53,11 +53,11 @@ REM ____________________________________PLAFOND.
 
 REM __________________gauche.
 
-DATA FE,FE,FE,FE,FE,00,7E,00
+DATA FF,FF,FF,FF,FF,00,7F,00
 
 REM __________________plein.
 
-DATA FE,FE,FE,FE,FE,00,FE,00
+DATA FF,FF,FF,FF,FF,00,FF,00
 
 REM __________________droite.
 
@@ -67,15 +67,15 @@ REM ____________________________________SOL.
 
 REM __________________gauche.
 
-DATA FE,FE,00,7E,7E,7E,7E,7E
+DATA FF,FF,00,7F,7F,7F,7F,7F
 
 REM __________________plein.
 
-DATA FE,FE,00,FE,FE,FE,FE,FE
+DATA FF,FF,00,FF,FF,FF,FF,FF
 
 REM __________________droite.
 
-DATA FE,FE,00,FC,FC,FC,FC,FC
+DATA FF,FF,00,FE,FE,FE,FE,FE
 
 REM ____________________________________PORTE.
 
