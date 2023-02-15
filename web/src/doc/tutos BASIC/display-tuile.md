@@ -4,7 +4,16 @@ slug: "afficher-tuile"
 description: "Tuto pour afficher une tuiles"
 ---
 
-## fonctionnement
+## Fonctionnement
+
+Cet article a pour but de présenter l'affichage de caractères utilisateur, ou tuiles, sur l'écran du MSX.
+
+C'est sur le fond d'écran, c'est à dire derrière tous les sprites potentiellement affichés, que ces fruits sont élus affection sur une grille fixe de 40 lignes de 38 tuiles.
+
+Nous allons traiter ici le mode d'écran 1.
+
+Il faut trois informations pour afficher un caractère à l'écran. Tout d'abord, son numéro, ou index, dans une bibliotheque de 256 caractères. Il faut aussi renseigner une paire de couleurs : couleur d'écriture et couleur de fond. Enfin,
+
 
 ## exemple
 
