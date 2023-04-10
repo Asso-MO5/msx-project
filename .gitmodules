@@ -1,0 +1,3 @@
+[submodule "room5"]
+	path = room5
+	url = git@github.com:Asso-MO5/room5.git
